@@ -106,9 +106,9 @@ function App() {
           <button
             type="button"
             onClick={(e) => navegarA('inicio', '/', e)}
-            className="flex items-center gap-2.5 pl-3 pr-2 py-1 text-sm font-black tracking-tight text-slate-900 uppercase hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2.5 pl-2 pr-2 py-1 text-sm font-black tracking-tight text-slate-900 uppercase hover:opacity-80 transition-opacity"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-blue-500 shadow-sm shadow-indigo-500/50"></span>
+            <img src="/logo.png" alt="Franco Loza" className="w-6 h-6 object-contain rounded-md" />
             <span>FRANCO LOZA</span>
           </button>
 
@@ -814,7 +814,11 @@ function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-200/80 bg-white/50 backdrop-blur-xl py-14 px-6 text-center text-xs text-slate-500 space-y-4">
+      <footer className="border-t border-slate-200/80 bg-white/50 backdrop-blur-xl py-14 px-6 text-center text-xs text-slate-500 space-y-5">
+        <div className="flex flex-col items-center gap-2">
+          <img src="/logo.png" alt="Franco Loza" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm" />
+          <span className="font-bold text-slate-800 text-xs tracking-wider uppercase">Franco Loza</span>
+        </div>
         <div className="flex justify-center items-center gap-8 font-semibold">
           <a href="https://www.linkedin.com/in/francoloza/" target="_blank" rel="noreferrer" className="hover:text-indigo-600 transition-colors">LinkedIn</a>
           <a href="https://github.com/Franco-Loza" target="_blank" rel="noreferrer" className="hover:text-indigo-600 transition-colors">GitHub</a>

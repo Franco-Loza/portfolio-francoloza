@@ -349,6 +349,7 @@ export default function MotorHubCaseStudy() {
             to="/proyectos"
             className="flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-slate-900 py-1 px-3 rounded-full hover:bg-slate-100/80 transition-all"
           >
+            <img src="/logo.png" alt="Franco Loza" className="w-5 h-5 object-contain rounded-sm" />
             <span className="material-symbols-outlined text-base text-indigo-600">arrow_back</span>
             Volver al Portfolio
           </Link>
