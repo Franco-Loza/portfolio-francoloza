@@ -814,10 +814,14 @@ function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-200/80 bg-white/50 backdrop-blur-xl py-14 px-6 text-center text-xs text-slate-500 space-y-5">
-        <div className="flex flex-col items-center gap-2">
-          <img src="/logo.png" alt="Franco Loza" className="w-8 h-8 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-sm" />
-          <span className="font-bold text-slate-800 text-xs tracking-wider uppercase">Franco Loza</span>
+      <footer className="border-t border-slate-200/80 bg-white/50 backdrop-blur-xl py-16 px-6 text-center text-xs text-slate-500 space-y-6">
+        <div className="flex flex-col items-center gap-3">
+          <img
+            src="/logo.png"
+            alt="Franco Loza"
+            className="w-20 h-20 sm:w-24 sm:h-24 object-contain rounded-2xl hover:scale-105 transition-all duration-300 drop-shadow-md"
+          />
+          <span className="font-extrabold text-slate-900 text-sm tracking-wider uppercase">Franco Loza</span>
         </div>
         <div className="flex justify-center items-center gap-8 font-semibold">
           <a href="https://www.linkedin.com/in/francoloza/" target="_blank" rel="noreferrer" className="hover:text-indigo-600 transition-colors">LinkedIn</a>
