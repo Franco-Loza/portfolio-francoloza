@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.tsx';
 import MotorHubCaseStudy from './pages/MotorHub.tsx';
+import AlpineCaseStudy from './pages/Alpine.tsx';
 import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/proyectos" element={<App />} />
         <Route path="/contacto" element={<App />} />
         <Route path="/proyectos/motorhub" element={<MotorHubCaseStudy />} />
+        <Route path="/proyectos/alpine" element={<AlpineCaseStudy />} />
         <Route path="*" element={<App />} />
       </Routes>
     </BrowserRouter>

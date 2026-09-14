@@ -574,7 +574,7 @@ function App() {
                   <span className={`px-1.5 py-0.5 text-[10px] rounded-full font-black ${
                     projectCategory === 'academicos' ? 'bg-white/20 text-white' : 'bg-blue-100 text-blue-700'
                   }`}>
-                    En carga
+                    1
                   </span>
                 </button>
               </div>
@@ -585,7 +585,7 @@ function App() {
               
               {/* PERSONAL PROJECT: MotorHub */}
               {(projectCategory === 'todos' || projectCategory === 'personales') && (
-                <div className="lg:col-span-8 p-8 sm:p-12 bg-gradient-to-br from-white/95 via-white/90 to-indigo-50/40 backdrop-blur-2xl border border-indigo-100 rounded-3xl shadow-xl shadow-indigo-950/[0.04] hover:shadow-2xl hover:shadow-indigo-500/[0.08] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                <div className="lg:col-span-12 p-8 sm:p-12 bg-gradient-to-br from-white/95 via-white/90 to-indigo-50/40 backdrop-blur-2xl border border-indigo-100 rounded-3xl shadow-xl shadow-indigo-950/[0.04] hover:shadow-2xl hover:shadow-indigo-500/[0.08] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
                   <div className="space-y-6">
                     <div className="flex flex-wrap items-center justify-between gap-3">
                       <div className="flex flex-wrap items-center gap-2">
@@ -594,7 +594,7 @@ function App() {
                           🚀 Proyecto Personal
                         </span>
                         <span className="px-3 py-1 bg-indigo-50 text-indigo-700 border border-indigo-200/80 text-xs font-bold rounded-full">
-                          SaaS • ERP & CRM
+                          SaaS • ERP & CRM Concesionarias
                         </span>
                       </div>
                       <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">2026 • Producción</span>
@@ -609,7 +609,7 @@ function App() {
                       </p>
                     </div>
 
-                    <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl">
+                    <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl">
                       Plataforma SaaS integral orientada a concesionarias y agencias multirrubro. Combina showroom interactivo con cotizaciones del dólar en vivo, peritaje técnico de usados, auditoría financiera y sincronización en tiempo real con Mercado Libre.
                     </p>
                   </div>
@@ -657,65 +657,80 @@ function App() {
                 </div>
               )}
 
-              {/* ACADEMIC PROJECT SECTION / CARD */}
+              {/* ACADEMIC PROJECT: ALPINE */}
               {(projectCategory === 'todos' || projectCategory === 'academicos') && (
-                <div className={`${projectCategory === 'academicos' ? 'lg:col-span-12' : 'lg:col-span-4'} p-8 sm:p-10 bg-gradient-to-br from-white/95 via-white/90 to-blue-50/40 backdrop-blur-2xl border border-blue-100 rounded-3xl shadow-xl shadow-blue-950/[0.04] hover:shadow-2xl hover:shadow-blue-500/[0.08] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden`}>
-                  <div className="space-y-5">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span className="px-3.5 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-black rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
-                        🎓 Proyecto Académico
-                      </span>
-                      <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200/80 text-[11px] font-bold rounded-full">
-                        Universidad / Cátedra
-                      </span>
+                <div className="lg:col-span-12 p-8 sm:p-12 bg-gradient-to-br from-white/95 via-white/90 to-blue-50/40 backdrop-blur-2xl border border-blue-100 rounded-3xl shadow-xl shadow-blue-950/[0.04] hover:shadow-2xl hover:shadow-blue-500/[0.08] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+                  <div className="space-y-6">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="px-4 py-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-xs font-black rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                          🎓 Proyecto Académico
+                        </span>
+                        <span className="px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200/80 text-xs font-bold rounded-full">
+                          PMS • Gestión Hotelera & Facturación Fiscal
+                        </span>
+                      </div>
+                      <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">Trabajo de Cátedra & TFI</span>
                     </div>
 
                     <div>
-                      <h4 className="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
-                        Trabajos de Cátedra & TFI
-                      </h4>
-                      <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mt-1">
-                        Sistemas Distribuidos • Algoritmos & Bases de Datos
+                      <h3 className="text-3xl sm:text-4xl font-black text-slate-900 group-hover:text-blue-600 transition-colors">
+                        ALPINE
+                      </h3>
+                      <p className="text-sm font-bold text-blue-600 uppercase tracking-wider mt-1">
+                        Sistema Integral de Gestión Hotelera & Facturación Multimoneda
                       </p>
                     </div>
 
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      Desarrollos de software aplicados durante la carrera universitaria, incluyendo arquitecturas en capas, persistencia de datos relacional y algoritmos de optimización.
+                    <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl">
+                      Plataforma PMS completa con motor de disponibilidad visual, Check-in multihuésped, folios de consumos de bar, liquidación contable de estadías (Facturas A y B con IVA discriminado), emisión atómica de Notas de Crédito y conciliación de cobranzas multimedio.
                     </p>
-
-                    <div className="p-4 bg-blue-50/70 border border-blue-100/90 rounded-2xl text-xs font-medium text-blue-900 flex items-start gap-3">
-                      <span className="material-symbols-outlined text-blue-600 text-base mt-0.5">folder_zip</span>
-                      <span>
-                        <strong className="font-bold text-blue-950">En preparación para cargar:</strong> Los repositorios de GitHub, esquemas de BD y documentación técnica se integrarán en esta sección.
-                      </span>
-                    </div>
                   </div>
 
-                  <div className="space-y-4 pt-6 mt-6 border-t border-slate-100">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      {['Java', 'Spring Boot', 'C++', 'PostgreSQL', 'MySQL', 'POO & UML'].map((tech) => (
-                        <span key={tech} className="px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] font-bold text-slate-700">
-                          {tech}
+                  <div className="space-y-6 pt-8 mt-8 border-t border-slate-100">
+                    <div className="flex flex-wrap items-center gap-2">
+                      {['Java 21', 'Spring Boot 3.5', 'Spring Data JPA', 'PostgreSQL (Neon)', 'JUnit 5 & Mockito', 'OpenAPI / Swagger', 'Next.js 16', 'React 19'].map((tag) => (
+                        <span key={tag} className="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-700 shadow-2xs">
+                          {tag}
                         </span>
                       ))}
                     </div>
 
-                    <div className="text-xs font-bold text-slate-400 flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                      <span>Próxima carga de proyectos hoy</span>
+                    <div className="flex flex-wrap items-center gap-3.5 pt-1">
+                      <Link
+                        to="/proyectos/alpine"
+                        className="px-6 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm font-bold rounded-2xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all flex items-center gap-2"
+                      >
+                        <span>Ver Caso de Estudio Completo</span>
+                        <span className="material-symbols-outlined text-base">arrow_forward</span>
+                      </Link>
+                      <a
+                        href="https://github.com/FranciscoSoltermann/Gestion-hotelera-Alpine"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-5 py-3.5 bg-white border border-slate-200 hover:border-slate-900 text-slate-700 hover:text-slate-900 text-sm font-bold rounded-2xl shadow-xs hover:shadow-md transition-all flex items-center gap-2"
+                        title="Backend Repo en Java / Spring Boot"
+                      >
+                        <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span>Backend Repo</span>
+                      </a>
+                      <a
+                        href="https://github.com/FranciscoSoltermann/FrontEnd-Alpine"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-5 py-3.5 bg-white border border-slate-200 hover:border-slate-900 text-slate-700 hover:text-slate-900 text-sm font-bold rounded-2xl shadow-xs hover:shadow-md transition-all flex items-center gap-2"
+                        title="Frontend Repo en Next.js / React"
+                      >
+                        <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span>Frontend Repo</span>
+                      </a>
                     </div>
                   </div>
-                </div>
-              )}
-
-              {/* Upcoming Slot Card (if in personal mode) */}
-              {projectCategory === 'personales' && (
-                <div className="lg:col-span-4 p-8 sm:p-12 bg-white/50 backdrop-blur-xl border-2 border-dashed border-slate-300 rounded-3xl flex flex-col items-center justify-center text-center group hover:border-indigo-400 hover:bg-white/80 transition-all duration-300 min-h-[360px]">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-indigo-50 to-blue-50 border border-indigo-100 text-indigo-600 shadow-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300 mb-5">
-                    <span className="material-symbols-outlined text-3xl">add</span>
-                  </div>
-                  <h4 className="text-xl font-bold text-slate-800">Próximos Proyectos Personales</h4>
-                  <p className="text-sm text-slate-500 max-w-xs mt-2">Nuevos desarrollos de microservicios y plataformas SaaS en desarrollo.</p>
                 </div>
               )}
 
