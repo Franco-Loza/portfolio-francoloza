@@ -370,7 +370,7 @@ export default function AlpineCaseStudy() {
           </Link>
           <span className="h-4 w-px bg-slate-200"></span>
           <a
-            href="https://github.com/FranciscoSoltermann/Gestion-hotelera-Alpine"
+            href="https://github.com/Franco-Loza/alpine-hotel-backend"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-full shadow-sm transition-all duration-200"
@@ -382,7 +382,7 @@ export default function AlpineCaseStudy() {
             <span>Backend</span>
           </a>
           <a
-            href="https://github.com/FranciscoSoltermann/FrontEnd-Alpine"
+            href="https://github.com/Franco-Loza/alpine-hotel-frontend"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold rounded-full shadow-2xs transition-all duration-200 border border-slate-200/80"
@@ -434,7 +434,7 @@ export default function AlpineCaseStudy() {
               <div>
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Backend</p>
                 <a
-                  href="https://github.com/FranciscoSoltermann/Gestion-hotelera-Alpine"
+                  href="https://github.com/Franco-Loza/alpine-hotel-backend"
                   target="_blank"
                   rel="noreferrer"
                   className="text-base font-bold text-blue-600 hover:text-blue-800 hover:underline inline-flex items-center gap-1 mt-1"
@@ -446,7 +446,7 @@ export default function AlpineCaseStudy() {
               <div>
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Frontend</p>
                 <a
-                  href="https://github.com/FranciscoSoltermann/FrontEnd-Alpine"
+                  href="https://github.com/Franco-Loza/alpine-hotel-frontend"
                   target="_blank"
                   rel="noreferrer"
                   className="text-base font-bold text-indigo-600 hover:text-indigo-800 hover:underline inline-flex items-center gap-1 mt-1"
@@ -715,7 +715,7 @@ export default function AlpineCaseStudy() {
           </div>
           <div className="flex flex-wrap items-center gap-4">
             <a
-              href="https://github.com/FranciscoSoltermann/Gestion-hotelera-Alpine"
+              href="https://github.com/Franco-Loza/alpine-hotel-backend"
               target="_blank"
               rel="noreferrer"
               className="px-7 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white text-sm font-bold rounded-2xl shadow-lg shadow-blue-500/30 transition-all flex items-center gap-2"
@@ -724,7 +724,7 @@ export default function AlpineCaseStudy() {
               <span className="material-symbols-outlined text-base">open_in_new</span>
             </a>
             <a
-              href="https://github.com/FranciscoSoltermann/FrontEnd-Alpine"
+              href="https://github.com/Franco-Loza/alpine-hotel-frontend"
               target="_blank"
               rel="noreferrer"
               className="px-7 py-4 bg-white/10 hover:bg-white/20 text-white text-sm font-bold rounded-2xl backdrop-blur-md border border-white/15 transition-all flex items-center gap-2.5"

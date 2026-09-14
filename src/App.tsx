@@ -706,7 +706,7 @@ function App() {
                         <span className="material-symbols-outlined text-base">arrow_forward</span>
                       </Link>
                       <a
-                        href="https://github.com/FranciscoSoltermann/Gestion-hotelera-Alpine"
+                        href="https://github.com/Franco-Loza/alpine-hotel-backend"
                         target="_blank"
                         rel="noreferrer"
                         className="px-5 py-3.5 bg-white border border-slate-200 hover:border-slate-900 text-slate-700 hover:text-slate-900 text-sm font-bold rounded-2xl shadow-xs hover:shadow-md transition-all flex items-center gap-2"
@@ -718,7 +718,7 @@ function App() {
                         <span>Backend Repo</span>
                       </a>
                       <a
-                        href="https://github.com/FranciscoSoltermann/FrontEnd-Alpine"
+                        href="https://github.com/Franco-Loza/alpine-hotel-frontend"
                         target="_blank"
                         rel="noreferrer"
                         className="px-5 py-3.5 bg-white border border-slate-200 hover:border-slate-900 text-slate-700 hover:text-slate-900 text-sm font-bold rounded-2xl shadow-xs hover:shadow-md transition-all flex items-center gap-2"
