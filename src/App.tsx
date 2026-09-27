@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 function App() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [projectCategory, setProjectCategory] = useState<'todos' | 'personales' | 'academicos'>('todos');
-  const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const location = useLocation();
 
   const navItems = [
@@ -84,12 +84,38 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const enviarMensaje = (e: React.FormEvent) => {
+  const enviarMensaje = async (e: React.FormEvent) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
-    setFormStatus('success');
-    form.reset();
-    setTimeout(() => setFormStatus('idle'), 4000);
+    setFormStatus('loading');
+
+    const formData = new FormData(form);
+    formData.append('_subject', 'Nuevo mensaje de contacto desde tu Portfolio Web');
+    formData.append('_template', 'table');
+    formData.append('_captcha', 'false');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/lozafranco@hotmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setFormStatus('success');
+        form.reset();
+        setTimeout(() => setFormStatus('idle'), 6000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 7000);
+      }
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 7000);
+    }
   };
 
   return (
@@ -757,7 +783,9 @@ function App() {
                 <div className="pt-4 space-y-4">
                   <div className="flex items-center gap-3 text-base font-semibold text-slate-700">
                     <span className="material-symbols-outlined text-indigo-600 text-2xl">mail</span>
-                    <span>Franco Loza</span>
+                    <a href="mailto:lozafranco@hotmail.com" className="hover:text-indigo-600 transition-colors">
+                      lozafranco@hotmail.com
+                    </a>
                   </div>
                   <div className="flex items-center gap-3 text-base font-semibold text-slate-700">
                     <span className="material-symbols-outlined text-indigo-600 text-2xl">location_on</span>
@@ -776,8 +804,9 @@ function App() {
                         id="nombre"
                         name="nombre"
                         required
+                        disabled={formStatus === 'loading'}
                         placeholder="Tu nombre"
-                        className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs"
+                        className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs disabled:opacity-60"
                       />
                     </div>
                     <div className="space-y-2">
@@ -787,8 +816,9 @@ function App() {
                         id="email"
                         name="email"
                         required
+                        disabled={formStatus === 'loading'}
                         placeholder="tu@email.com"
-                        className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs"
+                        className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs disabled:opacity-60"
                       />
                     </div>
                   </div>
@@ -800,24 +830,42 @@ function App() {
                       name="mensaje"
                       rows={5}
                       required
+                      disabled={formStatus === 'loading'}
                       placeholder="Escribí tu mensaje acá..."
-                      className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs"
+                      className="w-full px-5 py-4 bg-white/90 border border-slate-200 rounded-2xl text-sm resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all shadow-2xs disabled:opacity-60"
                     ></textarea>
                   </div>
 
                   {formStatus === 'success' && (
-                    <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold rounded-2xl flex items-center gap-2">
+                    <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold rounded-2xl flex items-center gap-2 animate-fadeIn">
                       <span className="material-symbols-outlined text-base text-emerald-600">check_circle</span>
-                      ¡Mensaje enviado con éxito!
+                      ¡Mensaje enviado con éxito! Te responderé a la brevedad.
+                    </div>
+                  )}
+
+                  {formStatus === 'error' && (
+                    <div className="p-4 bg-rose-50 border border-rose-200 text-rose-800 text-xs font-bold rounded-2xl flex items-center gap-2 animate-fadeIn">
+                      <span className="material-symbols-outlined text-base text-rose-600">error</span>
+                      Hubo un problema al enviar el mensaje. Podés escribirme directamente a lozafranco@hotmail.com.
                     </div>
                   )}
 
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white font-bold text-sm rounded-2xl shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-200 flex justify-center items-center gap-2"
+                    disabled={formStatus === 'loading'}
+                    className="w-full py-4 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 disabled:opacity-75 text-white font-bold text-sm rounded-2xl shadow-xl shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-200 flex justify-center items-center gap-2"
                   >
-                    <span>Enviar Mensaje</span>
-                    <span className="material-symbols-outlined text-lg">send</span>
+                    {formStatus === 'loading' ? (
+                      <>
+                        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                        <span>Enviando mensaje...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Enviar Mensaje</span>
+                        <span className="material-symbols-outlined text-lg">send</span>
+                      </>
+                    )}
                   </button>
                 </form>
               </div>
